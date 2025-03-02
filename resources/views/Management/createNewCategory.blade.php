@@ -9,10 +9,16 @@
         <div class="col-10">
             <div class="card">
                 <div class="card-header">
-                    <h6>Create Category</h6>
-                    <a href="/Management/category/create" class='btn btn-primary float-Right'>Create Category</a>
+                    <h6>Create New Category</h6>
+
                 </div>
                 <div class="card-body">
+                    <form action="/Management/category" method="POST">
+                        @csrf
+                        <label for="">New Category</label> <br>
+                        <input type="text" class='form-control' name='cat'> <br>
+                        <input type="submit" class='btn btn-danger'>
+                    </form>
                 </div>
                 <div class="card-footer">
                 </div>
